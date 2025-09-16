@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.container {
+  flex: 1;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+/* Proyectos */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Contacto */
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon svg {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.icon.linkedin:hover svg {
+  fill: #0e76a8;
+  transform: scale(1.1);
+}
+
+.icon.github:hover svg {
+  fill: #333;
+  background: #fff;
+  border-radius: 50%;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+}
